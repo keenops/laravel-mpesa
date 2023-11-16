@@ -62,7 +62,7 @@ class CheckoutController extends Controller
 
 ### Errors
 
-Specific error codes may be displayed within parenthesis when send or receive operations fail. The most common of these error codes are specified on beem.africa [API Documetation](https://openapiportal.m-pesa.com)
+Specific error codes may be displayed within parenthesis when send or receive operations fail. The most common of these error codes are specified on openapiportal.m-pesa.com [API Documetation](https://openapiportal.m-pesa.com)
 
 ### Testing
 
