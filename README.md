@@ -2,7 +2,6 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/keenops/laravel-mpesa.svg?style=flat-square)](https://packagist.org/packages/keenops/laravel-mpesa)
 [![Total Downloads](https://img.shields.io/packagist/dt/keenops/laravel-mpesa.svg?style=flat-square)](https://packagist.org/packages/keenops/laravel-mpesa)
-![GitHub Actions](https://github.com/keenops/laravel-mpesa/actions/workflows/main.yml/badge.svg)
 
 Engineered for seamless integration with the Vodacom M-Pesa OpenApi, it offers Laravel developers a streamlined pathway to execute customer-to-business transactions with ease and efficiency.
 
@@ -62,7 +61,7 @@ class CheckoutController extends Controller
 
 ### Errors
 
-Specific error codes may be displayed within parenthesis when send or receive operations fail. The most common of these error codes are specified on openapiportal.m-pesa.com [API Documetation](https://openapiportal.m-pesa.com)
+Specific error codes may be displayed within parenthesis when send or receive operations fail. The most common of these error codes are specified in API documetation found on [openapiportal.m-pesa.com](https://openapiportal.m-pesa.com)
 
 ### Testing
 
@@ -84,8 +83,8 @@ If you discover any security related issues, please email git@kimwalu.com instea
 
 ## Credits
 
--   [Kee Nops](https://github.com/keenops)
--   [All Contributors](../../contributors)
+- [Kee Nops](https://github.com/keenops)
+- [All Contributors](../../contributors)
 
 ## License
 
