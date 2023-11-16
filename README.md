@@ -16,7 +16,7 @@ composer require keenops/laravel-mpesa
 After installation, publish the configuration files by running the command:
 
 ```bash
-php artisan vendor:publish --tag=laravel-mpesa
+php artisan vendor:publish --tag=laravel-mpesa:v0.0.1-beta.1
 ```
 
 ## Usage
