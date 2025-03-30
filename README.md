@@ -10,7 +10,7 @@ Engineered for seamless integration with the Vodacom M-Pesa OpenApi, it offers L
 You can install the package via composer:
 
 ```bash
-composer require keenops/laravel-mpesa:v0.0.1-beta.1
+composer require keenops/laravel-mpesa:v0.0.1-beta.2
 ```
 
 Runing the above command should also publish in a config directory a file named laravel-mpesa.php. If so didnt happen, publish the configuration files by running the command:
