@@ -59,6 +59,109 @@ class CheckoutController extends Controller
 }
 ```
 
+### Business to Customer Transaction
+
+In your controller:
+
+```php
+namespace App\Http\Controllers;
+
+use Keenops\Mpesa\Mpesa;
+
+class PayoutController extends Controller
+{
+    public function sendMoney()
+    {
+        return Mpesa::b2c(
+            amount: '1000',
+            customerNumber: '255746277553',
+            serviceCode: '000000',
+            reference: 'REF123456',
+            description: 'Payment for services',
+            conversationId: 'b2c12345678xyz'
+        );
+
+        // Returns JSON response from M-Pesa API.
+    }
+}
+```
+
+### Business to Business Transaction
+
+In your controller:
+
+```php
+namespace App\Http\Controllers;
+
+use Keenops\Mpesa\Mpesa;
+
+class TransferController extends Controller
+{
+    public function transfer()
+    {
+        return Mpesa::b2b(
+            senderCode: '000001',
+            receiverCode: '000002',
+            amount: '50000',
+            reference: 'B2BRef001',
+            description: 'Supplier payment',
+            conversationId: 'b2bconv112233'
+        );
+
+        // Returns JSON response from M-Pesa API.
+    }
+}
+```
+
+### Reverse a Transaction
+
+In your controller:
+
+```php
+namespace App\Http\Controllers;
+
+use Keenops\Mpesa\Mpesa;
+
+class ReversalController extends Controller
+{
+    public function reverseTransaction()
+    {
+        return Mpesa::reverse(
+            amount: '1000',
+            serviceProviderCode: '000000',
+            conversationId: 'revConv778899',
+            transactionId: 'Trans123456789'
+        );
+
+        // Returns JSON response from M-Pesa API.
+    }
+}
+```
+
+### Query Transaction Status
+
+In your controller:
+
+```php
+namespace App\Http\Controllers;
+
+use Keenops\Mpesa\Mpesa;
+
+class StatusController extends Controller
+{
+    public function checkStatus()
+    {
+        return Mpesa::transactionStatus(
+            queryReference: 'REF123456',
+            serviceProviderCode: '000000',
+            conversationId: 'statusConv456789'
+        );
+
+        // Returns JSON response from M-Pesa API.
+    }
+}
+```
+
 ### Errors
 
 Specific error codes may be displayed within parenthesis when send or receive operations fail. The most common of these error codes are specified in API documetation found on [openapiportal.m-pesa.com](https://openapiportal.m-pesa.com)

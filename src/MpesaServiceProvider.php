@@ -14,11 +14,10 @@ class MpesaServiceProvider extends ServiceProvider
         /*
          * Optional methods to load your package assets
          */
-        if ($this->app->runningInConsole()) {
-            $this->publishes(
-                [__DIR__.'/../config/laravel-mpesa.php' => config_path('laravel-mpesa.php')],
-                ['laravel-mpesa']
-            );
+        if ($this->app->runningInConsole() && function_exists('config_path')) {
+            $this->publishes([
+                __DIR__ . '/../config/laravel-mpesa.php' => config_path('laravel-mpesa.php'),
+            ], 'laravel-mpesa');
         }
     }
 

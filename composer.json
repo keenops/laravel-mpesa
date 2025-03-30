@@ -17,7 +17,7 @@
   ],
   "require": {
     "php": "^7.4|^8.0",
-    "phpseclib/phpseclib": "~3.0"
+    "phpseclib/phpseclib": "^3.0"
   },
   "require-dev": {
     "orchestra/testbench": "^6.0",
@@ -37,7 +37,7 @@
     "test": "vendor/bin/phpunit",
     "test-coverage": "vendor/bin/phpunit --coverage-html coverage",
     "post-autoload-dump": [
-      "@php artisan vendor:publish --provider=\"Keenops\\Mpesa\\MpesaServiceProvider\" --tag=laravel-mpesa --force -q"
+      "[ -f artisan ] && php artisan vendor:publish --provider=\"Keenops\\Mpesa\\MpesaServiceProvider\" --tag=laravel-mpesa --force -q || echo 'No artisan file found, skipping vendor:publish'"
     ]
   },
   "config": {
